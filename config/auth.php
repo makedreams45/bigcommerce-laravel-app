@@ -108,4 +108,8 @@ return [
 
     'password_timeout' => 10800,
 
+    // Big Commerce credentials 
+    'bc_client_id' => env('BC_APP_CLIENT_ID'),
+    'bc_client_secret' => env('BC_APP_SECRET'),
+    'bc_redirect_url' => env('BC_APP_REDIRECT_URL'),
 ];

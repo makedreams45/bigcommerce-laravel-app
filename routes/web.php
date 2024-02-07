@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BigComAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Big Commerce Routes
+
+// 1) Authentication callback route 
+Route::get('/auth-callback', [BigComAuthController::class, 'authCallback']);
+
+// 2) this will get called whenever a user opens the app in BigCommerce.
+Route::get('/auth-load', [BigComAuthController::class, 'authLoad']);
